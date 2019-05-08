@@ -21,6 +21,11 @@ function initPlayer() {
   var video = document.getElementById('video');
   var player = new shaka.Player(video);
 
+  // Fast-Forward (2x).
+  player.setPlaybackRate(2);
+
+  // Rewind (-2x).
+  player.setPlaybackRate(-2);
   // Attach player to the window to make it easy to access in the JS console.
   window.player = player;
 
